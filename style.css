@@ -1,0 +1,78 @@
+@font-face {
+    font-family: "SpotifyMix";
+    src: url("./fonts/spotify_mix_ui_regular.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SpotifyMix";
+    src: url("./fonts/spotify_mix_ui_bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SpotifyMixTitle";
+    src: url("./fonts/spotify_mix_ui_title_bold.otf") format("opentype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "SpotifyMixTitle";
+    src: url("./fonts/spotify_mix_ui_title_extrabold.otf") format("opentype");
+    font-weight: 800;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "SpotifyMix", sans-serif;
+}
+.left {
+    width: 25vw;
+    padding: 10px;
+}
+
+.right {
+    width: 75vw;
+}
+
+.home ul li {
+    width: 14px;
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    padding-top: 14px;
+    font-weight: bold;
+}
+.library{
+    min-height: 50vh;
+}
+.heading{
+    margin: 0;
+ width: 100%;
+    gap: 5px;
+    padding-top: 14px;
+    font-weight: 700;
+    font-size: 12px; 
+    align-items: center;
+}
+.heading img{
+    width: 20px;
+}
+.footer-links ul{
+display: flex;
+list-style: none;
+color: grey;
+font-size: 12px;
+margin: 10px;
+gap: 15px;
+
+}
+.footer-links ul a{
+color: grey;
+}
