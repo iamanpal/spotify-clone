@@ -24,7 +24,7 @@ async function main(){
     let song= await getsongs();
     console.log(song);
 
-    let audio = new Audio(song[4]);
+    let audio = new Audio(song[3]); 
 audio.play();
 
 }
