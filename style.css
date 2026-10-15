@@ -101,20 +101,28 @@ body {
 .right {
     margin: 15px 0px;
 }
+.nav{
+        padding: 12px;
+}
 
 .header {
+    height: 60px;
     display: flex;
     justify-content: space-between;
     background-color: #201e1e;
 }
 
 .header>* {
-    padding: 18px;
+    padding: 10px;
+}
+
+.buttons > *{
+    margin: 0px 10px;
 }
 .signupbtn{
     background-color:#201e1e;
     color: #b3b3b3;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     border: none;
     outline: none;
@@ -122,9 +130,24 @@ body {
 
 .signupbtn:hover{
     background-color:#201e1e;
-    color: #e2dede;
-    font-size: 17px;
-    border: none;    outline: none;
+    color: #e4e0e0;
+    font-size: 15px;
+    
+}
+.loginbtn{
+    background-color: white;
+    color: black;
+    width: 98px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 12px;
+    font-weight: 17px;
+}
+.loginbtn:hover{
+    font-weight: 17px;
+    width: 99px;
+    font-weight: bold;
 }
 
 .spotifyplaylist {
@@ -139,7 +162,7 @@ body {
     gap: 20px;
     flex-wrap: wrap;
     margin: 15px;
-    max-height: 64vh;
+    max-height: 65vh;
     overflow-y: scroll;
 }
 .createCard::-webkit-scrollbar {
@@ -196,4 +219,60 @@ body {
 .card img {
     width: 100%;
     object-fit: contain;
+}
+
+.playbar{
+    border-radius: 15px;
+    width: 90%;
+    background-color: rgb(10, 85, 10);
+    padding: 10px;
+}
+.songbuttons{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.songList ul{
+    padding: 12px 25px;
+    
+}
+.songList ul li{
+    /* list-style-type: decimal; */
+    list-style: none;
+    list-style-position: inside;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: flex;
+    gap: 10px;
+    border: 2px solid white;
+    border-radius: 7px;
+    cursor: pointer;
+    margin: 17px 0px;
+    padding: 15px;
+}
+.playnow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    margin-left: 20px;
+    
+    
+}
+.playnow span{
+
+font-size: 15px;
+
+
+}
+.playnow img{
+scale:1.2;
+}
+.songList .info{
+    font-size: 13px;
+width: 200px;
+/* border: 2px solid white; */
+overflow: hidden;
+
 }
