@@ -120,7 +120,7 @@ body {
     margin: 0px 10px;
 }
 .signupbtn{
-    background-color:#201e1e;
+    background-color:#121212;
     color: #b3b3b3;
     font-size: 14px;
     font-weight: bold;
@@ -129,7 +129,7 @@ body {
 }
 
 .signupbtn:hover{
-    background-color:#201e1e;
+    background-color:#121212;
     color: #e4e0e0;
     font-size: 15px;
     
@@ -155,14 +155,12 @@ body {
     
 }
 
-
-
 .createCard {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     margin: 15px;
-    max-height: 65vh;
+    max-height: 71vh;
     overflow-y: scroll;
 }
 .createCard::-webkit-scrollbar {
@@ -221,19 +219,24 @@ body {
     object-fit: contain;
 }
 
-.playbar{
-    border-radius: 15px;
-    width: 90%;
+.playbar {
+        position: fixed;
+    height: 33px;
+    bottom: 26px;
+    left: 26%;
+    border-radius: 14px;
+    width: 70vw;
     background-color: rgb(10, 85, 10);
-    padding: 10px;
+    padding: 11px;
 }
+
 .songbuttons{
     display: flex;
     justify-content: center;
     gap: 30px;
 }
 .songList ul{
-    padding: 12px 25px;
+  padding: 10px 15px;
     
 }
 .songList ul li{
@@ -245,7 +248,7 @@ body {
     text-overflow: ellipsis;
     display: flex;
     gap: 10px;
-    border: 2px solid white;
+    border: 1px solid white;
     border-radius: 7px;
     cursor: pointer;
     margin: 17px 0px;
@@ -275,4 +278,52 @@ width: 200px;
 /* border: 2px solid white; */
 overflow: hidden;
 
+}
+.songList{
+    height: 644px;
+    /* border: 1px solid white; */
+    overflow: auto;
+        margin-bottom:40px;
+}
+.songList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.songList::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+.songList::-webkit-scrollbar-thumb {
+    background: #5a5a5a;
+    border-radius: 10px;
+}
+
+.songList::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+.seekbar{
+      position: relative;
+    top: 12px;
+    width: 100%;
+    height: 2px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin: 6px 0px;
+}
+.circle{
+    position: relative;
+    width: 14px;
+    height: 14px;
+    bottom: 6px;
+    left: 0%;
+    border-radius: 15px;
+    background-color: rgb(243, 236, 236);
+    transition:  left 1s;
+}
+.songbuttons img{
+    cursor: pointer;
+}
+.playbarflex{
+    display: flex;
+        justify-content: space-between;
 }
