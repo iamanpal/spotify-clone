@@ -1,5 +1,11 @@
 
 let currentsong=new Audio();
+function formatTime(seconds) {
+    let minutes = Math.floor(seconds / 60);
+    let remainingSeconds = Math.floor(seconds % 60);
+
+    return `${minutes}:${String(remainingSeconds).padStart(2, '0')}`;
+}
 async function getsongs(){
     let a = await fetch("/songs/")
     let response = await a.text();
@@ -19,19 +25,22 @@ async function getsongs(){
     return songs
 }
 
-const playMusic= (track)=>{
+const playMusic= (track, pause=false)=>{
 // let audio =new Audio("/songs/"+track)
 currentsong.src="/songs/"+track;
+if(!false){
 currentsong.play()
-play.src="pause.svg"
-document.querySelector(".songinfo").innerHTML=track;
+play.src="/icons/pause.svg"
+}
+
+document.querySelector(".songinfo").innerHTML=decodeURI(track);
 document.querySelector(".songtime").innerHTML= "00.00/00.00"
 }
 
 async function main(){
    
     let songs = await getsongs();
-
+    playMusic(songs[0],true)
 
     let songUl = document.querySelector(".songList").getElementsByTagName("ul")[0]
 
@@ -63,7 +72,7 @@ const play=document.getElementById("play");
 play.addEventListener("click",()=>{
    if(currentsong.paused){
        currentsong.play();
-       play.src = "/icons/pause.svg";
+       play.src ="/icons/pause.svg"
        
    }
    else{
@@ -75,5 +84,10 @@ play.addEventListener("click",()=>{
 
 })
 
+currentsong.addEventListener("timeupdate",()=>{
+    // console.log(currentsong.currentTime,currentsong.duration);
+    document.querySelector(".songtime").innerHTML=`${formatTime(currentsong.currentTime)}/
+    ${formatTime(currentsong.duration)}`
+})
 
 main();

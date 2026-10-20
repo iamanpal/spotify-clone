@@ -223,9 +223,9 @@ body {
         position: fixed;
     height: 33px;
     bottom: 26px;
-    left: 26%;
+    left: 27%;
     border-radius: 14px;
-    width: 70vw;
+    width: 67vw;
     background-color: rgb(10, 85, 10);
     padding: 11px;
 }
@@ -325,5 +325,18 @@ overflow: hidden;
 }
 .playbarflex{
     display: flex;
-        justify-content: space-between;
+    justify-content: space-between;
+}
+.songinfo{
+  
+     width: 200px;
+     height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis
+  
+}
+.songinfo , .songtime{
+     margin: 0px 12px;
+     scale: 1.2;
 }
